@@ -369,22 +369,22 @@
             color: var(--accent);
         }
         
-        .difficulty {
+        .recomendation {
             display: flex;
             margin: 10px 0;
         }
         
-        .difficulty-label {
+        .recomendation-label {
             margin-right: 10px;
             font-size: 0.9rem;
             color: var(--gray);
         }
         
-        .difficulty-stars {
+        .recomendation-stars {
             color: var(--light-gray);
         }
         
-        .difficulty-stars .active {
+        .recomendation-stars .active {
             color: gold;
         }
         
@@ -671,7 +671,7 @@
                 platform: 'B站',
                 views: '320万',
                 rating: '98%',
-                difficulty: 2,
+                recomendation: 5,
                 progress: 45,
                 link: 'https://www.bilibili.com/video/BV1Wv411h7kN',
                 favorite: true
@@ -685,7 +685,7 @@
                 platform: 'B站',
                 views: '180万',
                 rating: '97%',
-                difficulty: 3,
+                recomendation: 5,
                 progress: 30,
                 link: 'https://www.bilibili.com/video/BV1FT4y1E74V',
                 favorite: true
@@ -699,7 +699,7 @@
                 platform: 'B站',
                 views: '150万',
                 rating: '99%',
-                difficulty: 3,
+                recomendation: 5,
                 progress: 20,
                 link: 'https://www.bilibili.com/video/BV1f54ZzGEMC/',
                 favorite: true
@@ -712,7 +712,7 @@
                 category: '机器学习',
                 rating: '4.8/5.0',
                 nickname: '西瓜书',
-                difficulty: 4,
+                recomendation: 4,
                 progress: 75,
                 link: 'https://item.jd.com/11867803.html',
                 favorite: true
@@ -725,7 +725,7 @@
                 category: '深度学习',
                 rating: '4.7/5.0',
                 nickname: '花书',
-                difficulty: 5,
+                recomendation: 3,
                 progress: 60,
                 link: 'https://item.jd.com/12128543.html',
                 favorite: true
@@ -738,7 +738,7 @@
                 category: '自然语言处理',
                 rating: '4.6/5.0',
                 nickname: '入门推荐',
-                difficulty: 3,
+                recomendation: 3,
                 progress: 40,
                 link: 'https://item.jd.com/12669377.html',
                 favorite: false
@@ -751,7 +751,7 @@
                 category: 'Transformer',
                 year: '2017',
                 citations: '7万+',
-                difficulty: 5,
+                recomendation: 5,
                 progress: 10,
                 link: 'https://arxiv.org/abs/1706.03762',
                 favorite: true
@@ -764,7 +764,7 @@
                 category: 'BERT',
                 year: '2018',
                 citations: '4万+',
-                difficulty: 4,
+                recomendation: 4,
                 progress: 15,
                 link: 'https://arxiv.org/abs/1810.04805',
                 favorite: false
@@ -776,7 +776,7 @@
                 description: '涵盖深度学习各方面知识的问答式博客，适合查漏补缺。',
                 category: '深度学习',
                 author: 'GitHub开源项目',
-                difficulty: 3,
+                recomendation: 3,
                 progress: 25,
                 link: 'https://github.com/scutan90/DeepLearning-500-questions',
                 favorite: true
@@ -852,10 +852,10 @@
                     <div class="card-body">
                         <h4 class="resource-title">${resource.title}</h4>
                         <p class="resource-desc">${resource.description}</p>
-                        <div class="difficulty">
-                            <span class="difficulty-label">难度:</span>
-                            <div class="difficulty-stars">
-                                ${generateDifficultyStars(resource.difficulty)}
+                        <div class="recomendation">
+                            <span class="recomendation-label">推荐指数:</span>
+                            <div class="recomendation-stars">
+                                ${generaterecomendationStars(resource.recomendation)}
                             </div>
                         </div>
                         <div class="progress-container">
@@ -888,10 +888,10 @@
                     <div class="card-body">
                         <h4 class="resource-title">${resource.title}</h4>
                         <p class="resource-desc">${resource.description}</p>
-                        <div class="difficulty">
-                            <span class="difficulty-label">难度:</span>
-                            <div class="difficulty-stars">
-                                ${generateDifficultyStars(resource.difficulty)}
+                        <div class="recomendation">
+                            <span class="recomendation-label">推荐指数:</span>
+                            <div class="recomendation-stars">
+                                ${generaterecomendationStars(resource.recomendation)}
                             </div>
                         </div>
                         <div class="progress-container">
@@ -924,10 +924,10 @@
                     <div class="card-body">
                         <h4 class="resource-title">${resource.title}</h4>
                         <p class="resource-desc">${resource.description}</p>
-                        <div class="difficulty">
-                            <span class="difficulty-label">难度:</span>
-                            <div class="difficulty-stars">
-                                ${generateDifficultyStars(resource.difficulty)}
+                        <div class="recomendation">
+                            <span class="recomendation-label">推荐指数:</span>
+                            <div class="recomendation-stars">
+                                ${generaterecomendationStars(resource.recomendation)}
                             </div>
                         </div>
                         <div class="progress-container">
@@ -960,10 +960,10 @@
                     <div class="card-body">
                         <h4 class="resource-title">${resource.title}</h4>
                         <p class="resource-desc">${resource.description}</p>
-                        <div class="difficulty">
-                            <span class="difficulty-label">难度:</span>
-                            <div class="difficulty-stars">
-                                ${generateDifficultyStars(resource.difficulty)}
+                        <div class="recomendation">
+                            <span class="recomendation-label">推荐指数:</span>
+                            <div class="recomendation-stars">
+                                ${generaterecomendationStars(resource.recomendation)}
                             </div>
                         </div>
                         <div class="progress-container">
@@ -1010,11 +1010,11 @@
             return card;
         }
 
-        // 生成难度星级
-        function generateDifficultyStars(difficulty) {
+        // 生成推荐指数星级
+        function generaterecomendationStars(recomendation) {
             let stars = '';
             for (let i = 1; i <= 5; i++) {
-                if (i <= difficulty) {
+                if (i <= recomendation) {
                     stars += '<i class="fas fa-star active"></i>';
                 } else {
                     stars += '<i class="far fa-star"></i>';
@@ -1030,7 +1030,7 @@
             
             let modalContent = `
                 <p><strong>描述:</strong> ${resource.description}</p>
-                <p><strong>难度:</strong> ${generateDifficultyStars(resource.difficulty)}</p>
+                <p><strong>推荐指数:</strong> ${generaterecomendationStars(resource.recomendation)}</p>
                 <p><strong>学习进度:</strong> ${resource.progress}%</p>
             `;
             
@@ -1256,6 +1256,7 @@
     </script>
 </body>
 </html>
+
 
 
 
